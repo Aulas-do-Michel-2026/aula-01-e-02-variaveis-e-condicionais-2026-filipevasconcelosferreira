@@ -19,10 +19,10 @@ Dica: Use inputs para receber os dados!
 Lembre de converter ele para o tipo necessário!
 Print na tela com "print"
 """
-primeira_nota = float(input("Digite a primeira nota: "))
-segunda_nota = float(input("Digite a segunda nota: "))
-terceira_nota = float(input("Digite a terceira nota: "))
+primeira_nota = float(input("Digite a primeira nota:\n"))
+segunda_nota = float(input("Digite a segunda nota:\n"))
+terceira_nota = float(input("Digite a terceira nota:\n "))
 
 média = (primeira_nota + segunda_nota + terceira_nota)/3
 
-print(f"Média: {média:.2f}")
+print(f"Resposta:\nMédia: {média:.2f}")
