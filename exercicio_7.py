@@ -91,7 +91,7 @@ Tente, se não der, olhe lá!
 
 freq_populacional = float(input("Digite a frequencia populacional (em porcentagem): "))
 gene = str(input("\n\nDigite o gene: "))
-impacto = str(input("\nDigite a Impacto (ALTO ou BAIXO): "))
+impacto = str(input("\n\nDigite a Impacto (ALTO ou BAIXO): "))
 reads = int(input("\n\nDigite os reads: "))
 vaf = float(input("\n\nDigite a frequencia alélica (em porcentagem): "))
 
@@ -101,7 +101,7 @@ if (reads < 10) or (vaf < 20):
     print("\n\nResposta: Não é relevante.")
 elif impacto != "ALTO":
     print("\n\nResposta: Não é relevante.")
-elif (frequencia_populacional > 5) and not genes_exceção:
+elif (freq_populacional > 5) and not genes_exceção:
     print("\n\nResposta: Não é relevante.")
 else
     print("\n\nResposta: É relevante.")
