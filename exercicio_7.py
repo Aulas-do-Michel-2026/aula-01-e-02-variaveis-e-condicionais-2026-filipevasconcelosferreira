@@ -90,16 +90,16 @@ Tente, se não der, olhe lá!
 """
 
 freq_populacional = float(input("Digite a frequencia populacional (em percentagem): "))
-gene = str(input("Digite o gene: ")).upper()
-impacto = str(input("Digite a Impacto (ALTO ou BAIXO): ")).upper()
-reads = int(input("Digite os reads: "))
-vaf = float(input("Digite a frequencia alélica (em percentagem): "))
+gene = str(input("\nDigite o gene: ")).upper()
+impacto = str(input("\nDigite a Impacto (ALTO ou BAIXO): ")).upper()
+reads = int(input("\nDigite os reads: "))
+vaf = float(input("\nDigite a frequencia alélica (em percentagem): "))
 
 artefato = True
 variante = reads < 10 or vaf < 20
 
 while variante is artefato: 
-    print("Resposta: Não é relevante.")
+    print("\nResposta: Não é relevante.")
     break
 
 genes_exceção = ["HFE","MEFV", "GJB2"]
@@ -107,12 +107,12 @@ genes_exceção = ["HFE","MEFV", "GJB2"]
 while variante is not artefato:
     if impacto == "ALTO":
         if freq_populacional < 5:
-            print("Resposta: É relevante.")
+            print("\nResposta: É relevante.")
         elif (freq_populacional > 5) and (gene in genes_exceção):
-            print("Resposta: É relevante.")
+            print("\nResposta: É relevante.")
         else: 
-            print("Resposta: Não é relevante.")
+            print("\nResposta: Não é relevante.")
     if impacto == "BAIXO":
-        print("Resposta: Não é relevante.")
+        print("\nResposta: Não é relevante.")
     break
 
