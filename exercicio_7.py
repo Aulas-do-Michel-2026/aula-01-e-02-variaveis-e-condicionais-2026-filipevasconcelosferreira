@@ -90,29 +90,28 @@ Tente, se não der, olhe lá!
 """
 
 freq_populacional = float(input("Digite a frequencia populacional (em porcentagem): "))
-gene = str(input("\nDigite o gene: "))
+gene = str(input("\n\nDigite o gene: "))
 impacto = str(input("\nDigite a Impacto (ALTO ou BAIXO): "))
-reads = int(input("\nDigite os reads: "))
-vaf = float(input("\nDigite a frequencia alélica (em porcentagem): "))
+reads = int(input("\n\nDigite os reads: "))
+vaf = float(input("\n\nDigite a frequencia alélica (em porcentagem): "))
 
 artefato = True
 variante = (reads < 10) or (vaf < 20)
 
 while variante is artefato: 
-    print("\nResposta: Não é relevante.")
+    print("\n\nResposta: Não é relevante.")
     break
 
 genes_exceção = ["HFE","MEFV", "GJB2"]
 
 while variante is not artefato:
-    if impacto == "ALTO":
-        if freq_populacional < 5:
-            print("\nResposta: É relevante.")
-        elif (freq_populacional > 5) and (gene in genes_exceção):
-            print("\nResposta: É relevante.")
-        else: 
-            print("\nResposta: Não é relevante.")
-    if impacto == "BAIXO":
-        print("\nResposta: Não é relevante.")
+    if (impacto == "ALTO") or (freq_populacional < 5 and (gene in genes_exceção)):
+            print("\n\nResposta: É relevante.")
+    else: 
+            print("\n\nResposta: Não é relevante.")
     break
+
+
+
+
 
