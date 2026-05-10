@@ -13,7 +13,7 @@ Digite o peso do paciente (em kg):
 Resposta:
 Média: 140 mg
 """
-peso = int(input("Digite o peso do paciente (em kg): "))
+peso = int(input("Digite o peso do paciente (em kg):\n"))
 dose = peso * 2
 
-print(f"Média: {dose} mg")
+print(f"Resposta:\nMédia: {dose} mg")
