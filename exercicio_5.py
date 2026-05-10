@@ -56,30 +56,32 @@ Não
 
 """
 
-prefixo = "chr"
-cromossomos = ["{}{}".format(prefixo, i) for i in range(1,23)]
-cromossomos.append("chrM")
-cromossomos.append("chrF")
+#prefixo = "chr"
+#cromossomos = ["{}{}".format(prefixo, i) for i in range(1,23)]
+#cromossomos.append("chrM")
+#cromossomos.append("chrF")
 
 #print(cromossomos)
 
-genomas = ["hg19", "hg38"]
+#genomas = ["hg19", "hg38"]
 
-cromossomo_escolhido = input(f"Digite o cromossomo ({', '.join(cromossomos)}): ")
-posição_escolhida = int(input("Digite a posição: "))
-genoma_escolhido = input(f"Digite o genoma de referência ({', '.join(genomas)}): ")
+#cromossomo_escolhido = input(f"Digite o cromossomo ({', '.join(cromossomos)}): ")
+cromossomo_escolhido = str(input("Digite o cromossomo: "))
+posição_escolhida = int(input("\nDigite a posição: "))
+genoma_escolhido = str(input("\nDigite o genoma de referência: "))
+#genoma_escolhido = input(f"Digite o genoma de referência ({', '.join(genomas)}): ")
 
 while cromossomo_escolhido == "chr17":
     if (posição_escolhida >= 41196312 and posição_escolhida <= 41277500) and (genoma_escolhido == "hg19"):
-        print("\nResposta:\nSim")
+        print("\n\nResposta:\nSim")
     elif (posição_escolhida >= 43044295 and posição_escolhida <= 43125483) and (genoma_escolhido == "hg38"):
-        print("\nResposta:\nSim")
+        print("\n\nResposta:\nSim")
     else:
-        print("\nResposta:\nNão")
+        print("\n\nResposta:\nNão")
     break
 
 if cromossomo_escolhido != "chr17":
-    print("\nResposta:\nNão")
+    print("\n\nResposta:\nNão")
 
 
 
