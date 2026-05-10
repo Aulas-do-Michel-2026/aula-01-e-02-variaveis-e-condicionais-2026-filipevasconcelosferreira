@@ -95,6 +95,20 @@ impacto = str(input("\nDigite a Impacto (ALTO ou BAIXO): "))
 reads = int(input("\n\nDigite os reads: "))
 vaf = float(input("\n\nDigite a frequencia alélica (em porcentagem): "))
 
+genes_exceção = ["HFE","MEFV","GJB2"]
+
+if (reads < 10) or (vaf < 20):
+    print("\n\nResposta: Não é relevante.")
+elif impacto != "ALTO":
+    print("\n\nResposta: Não é relevante.")
+elif (frequencia_populacional > 5) and (gene not in genes_exceção):
+    print("\n\nResposta: Não é relevante.")
+else
+    print("\n\nResposta: É relevante.")
+
+
+
+"""
 artefato = True
 variante = (reads < 10) or (vaf < 20)
 
@@ -114,13 +128,6 @@ while variante is not artefato:
     break
 
 """
-if (reads < 10) or (vaf < 20):
-    print("Não é relevante, deve ser artefato.")
-elif impacto != "ALTO":
-    print("Não é relevante.")
-elif (frequencia_populacional > 5) and not genes_de_excecao:
-    print("Não é relevante.")
-else:
-    print("É relevante.")
-"""
+
+
 
