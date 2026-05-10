@@ -58,17 +58,17 @@ paises_aceitaveis = ["Estados Unidos", "Argentina", "Japão"]
 pais_destino = str(input("Qual país vai viajar? "))
 
 while pais_destino in paises_aceitaveis:
-    reais = float(input("Quantos reais você quer converter? "))
+    reais = float(input("\nQuantos reais você quer converter? "))
     conversão = [reais*0.20, reais*180, reais*30]
     moedas = ["USD", "ARS", "JPY"]
     for país in paises_aceitaveis:
         if país == pais_destino:
             indice = paises_aceitaveis.index(país)
-            print(f"Resposta:\n{conversão[indice]:.2f} {moedas[indice]}")
+            print(f"\n\nResposta:\n{conversão[indice]:.2f} {moedas[indice]}")
     break
 
 if pais_destino not in paises_aceitaveis:
-    print("Resposta:\nNão temos essa moeda em caixa.")
+    print("\n\nResposta:\nNão temos essa moeda em caixa.")
 
 
 
