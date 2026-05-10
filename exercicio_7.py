@@ -95,18 +95,16 @@ impacto = str(input("\nDigite a Impacto (ALTO ou BAIXO): "))
 reads = int(input("\n\nDigite os reads: "))
 vaf = float(input("\n\nDigite a frequencia alélica (em porcentagem): "))
 
-genes_exceção = ["HFE","MEFV","GJB2"]
-
+genes_exceção = (gene == 'HFE') or (gene == 'MEFV') or (gene == 'GJB2')
+ 
 if (reads < 10) or (vaf < 20):
     print("\n\nResposta: Não é relevante.")
 elif impacto != "ALTO":
     print("\n\nResposta: Não é relevante.")
-elif (frequencia_populacional > 5) and (gene not in genes_exceção):
+elif (frequencia_populacional > 5) and not genes_exceção:
     print("\n\nResposta: Não é relevante.")
 else
     print("\n\nResposta: É relevante.")
-
-
 
 """
 artefato = True
