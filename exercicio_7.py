@@ -89,14 +89,14 @@ Esse exercício está com uma resolução no notebook da aula.
 Tente, se não der, olhe lá!
 """
 
-freq_populacional = float(input("Digite a frequencia populacional (em percentagem): "))
-gene = str(input("\nDigite o gene: ")).upper()
-impacto = str(input("\nDigite a Impacto (ALTO ou BAIXO): ")).upper()
+freq_populacional = float(input("Digite a frequencia populacional (em porcentagem): "))
+gene = str(input("\nDigite o gene: "))
+impacto = str(input("\nDigite a Impacto (ALTO ou BAIXO): "))
 reads = int(input("\nDigite os reads: "))
-vaf = float(input("\nDigite a frequencia alélica (em percentagem): "))
+vaf = float(input("\nDigite a frequencia alélica (em porcentagem): "))
 
 artefato = True
-variante = reads < 10 or vaf < 20
+variante = (reads < 10) or (vaf < 20)
 
 while variante is artefato: 
     print("\nResposta: Não é relevante.")
