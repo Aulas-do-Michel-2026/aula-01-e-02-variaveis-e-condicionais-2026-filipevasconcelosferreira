@@ -103,7 +103,7 @@ elif impacto != "ALTO":
     print("\n\nResposta: Não é relevante.")
 elif (freq_populacional > 5) and not genes_exceção:
     print("\n\nResposta: Não é relevante.")
-else
+else:
     print("\n\nResposta: É relevante.")
 
 """
