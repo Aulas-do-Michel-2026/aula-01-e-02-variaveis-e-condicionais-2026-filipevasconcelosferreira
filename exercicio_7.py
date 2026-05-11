@@ -90,10 +90,10 @@ Tente, se não der, olhe lá!
 """
 
 freq_populacional = float(input("Digite a frequencia populacional (em porcentagem): "))
-gene = str(input("\n\nDigite o gene: "))
-impacto = str(input("\n\nDigite a Impacto (ALTO ou BAIXO): "))
-reads = int(input("\n\nDigite os reads: "))
-vaf = float(input("\n\nDigite a frequencia alélica (em porcentagem): "))
+gene = str(input("Digite o gene: "))
+impacto = str(input("Digite a Impacto (ALTO ou BAIXO): "))
+reads = int(input("Digite os reads: "))
+vaf = float(input("Digite a frequencia alélica (em porcentagem): "))
 
 genes_exceção = (gene == 'HFE') or (gene == 'MEFV') or (gene == 'GJB2')
  
