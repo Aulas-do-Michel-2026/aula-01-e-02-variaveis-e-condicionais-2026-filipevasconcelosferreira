@@ -98,13 +98,13 @@ vaf = float(input("\n\nDigite a frequencia alélica (em porcentagem): "))
 genes_exceção = (gene == 'HFE') or (gene == 'MEFV') or (gene == 'GJB2')
  
 if (reads < 10) or (vaf < 20):
-    print("\n\nResposta: Não é relevante.")
+    print("Não é relevante.")
 elif impacto != "ALTO":
-    print("\n\nResposta: Não é relevante.")
+    print("Não é relevante.")
 elif (freq_populacional > 5) and not genes_exceção:
-    print("\n\nResposta: Não é relevante.")
+    print("Não é relevante.")
 else:
-    print("\n\nResposta: É relevante.")
+    print("É relevante.")
 
 """
 artefato = True
